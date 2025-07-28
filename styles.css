@@ -2,6 +2,84 @@ html {
   scroll-behavior: smooth;
 }
 
+/* === Mobile Responsiveness Enhancements === */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+  }
+
+  .skills-exp {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .intro {
+    margin-left: 0;
+    padding: 0 20px;
+  }
+
+  .videos video,
+  .vlog video {
+    width: 100%;
+    height: auto;
+  }
+
+  .vlog video.portrait,
+  .portrait-wrapper video {
+    width: 90vw;
+    height: auto;
+  }
+
+  .videos figure {
+    max-width: 100%;
+  }
+
+  .nav-links {
+    padding: 20px 10px;
+  }
+
+  .dropdown-menu {
+    background: #111;
+    padding-left: 0;
+  }
+
+  .dropdown-menu li a {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+
+  header.home {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .intro h2 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .social {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+  }
+
+  .contact-info strong {
+    min-width: 90px;
+  }
+}
+
+
 @media (max-width: 600px) {
   .vlog-portrait-row video.portrait {
     width: 90vw;

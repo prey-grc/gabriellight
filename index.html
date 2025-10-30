@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio | Gabriel Light</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
@@ -41,7 +43,38 @@
         I can tailor my editing style to match your vision and brand needs.
       </p>
       <div class="social">
-        <a href="https://facebook.com/lght0727" target="_blank">facebook.com/lght0727</a>
+        <a href="https://facebook.com/light0727" target="_blank">facebook.com/light0727</a>
+      </div>
+    </div>
+  </header>
+
+      <figure>
+        <div class="video-animate">
+          <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/xebkuEtVyaE"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+          </iframe>
+        </div>
+        <figcaption><em>Obra – JAM Production</em></figcaption>
+      </figure>
+
+      <figure>
+        <div class="video-animate">
+          <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/YMQJwp8t3b0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+          </iframe>
+        </div>
+        <figcaption><em>Padayon – Rainahssance Production</em></figcaption>
+      </figure>
+    </div>
+        <a href="https://facebook.com/light0727" target="_blank">facebook.com/light0727</a>
       </div>
     </div>
   </header>
@@ -103,13 +136,47 @@
     <p>Short films I collaborated on for STI’s Director's Cut competitions and school projects.</p></div>
     <div class="videos">
       <figure>
-      <video class="video-animate" controls controlsList="nodownload"><source src="image/my-video.mp4" type="video/mp4"></video>
-       <figcaption><em>El Filibusterismo Trailer</em></figcaption></figure>
-      <figure><video class="video-animate" controls controlsList="nodownload"><source src="image/my-video.mp4" type="video/mp4"></video>
-         <figcaption><em>Obra – JAM Production</em></figcaption></figure>
-      <figure><video class="video-animate" controls controlsList="nodownload"><source src="image/my-video.mp4" type="video/mp4"></video>
-        <figcaption><em>Padayon – Rainahssance Production</em></figcaption></figure>
+      <figure>
+    <div class="video-animate">
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/akvSnQcevfE"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
     </div>
+    <figcaption><em>El Filibusterismo Trailer</em></figcaption>
+</figure>
+
+      <figure>
+    <div class="video-animate">
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/xebkuEtVyaE"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+    <figcaption><em>Obra – JAM Production</em></figcaption>
+</figure>
+
+      <figure>
+    <div class="video-animate">
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/YMQJwp8t3b0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+    <figcaption><em>Padayon – Rainahssance Production</em></figcaption>
+</figure>
+</div>
+
+
     
     <div class="section-content">
     <h2 id="creations-vlog">Creations: <span class="accent styled">Vlog</span></h2>
@@ -137,7 +204,9 @@
     <div class="videos">
       <video class="video-animate" controls controlsList="nodownload">
   <source src="image/my-video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
 </video>
+
     </div>
   </section>
 
@@ -160,16 +229,16 @@
 
   <footer>
   <div class="footer-content">
-    <h3>Gabriel Light</h3>
+    <h3>Gabriel Light S. Abenoja</h3>
     <p>Video Editor</p>
     <div class="footer-socials">
       <a href="https://facebook.com/light0727" target="_blank">Facebook</a>
       <span>|</span>
       <a href="mailto:gabrielstarinala@gmail.com">Email</a>
       <span>|</span>
-      <a href="tel:09939984528">Call</a>
+      <a href="tel:09939984528">Phone</a>
     </div>
-    <p class="copyright">© 2025 Gabriel Light. All rights reserved.</p>
+    <p class="copyright">© Gabriel Light Abenoja.</p>
   </div>
 </footer>
 <button id="scrollTop" aria-label="Scroll to top">
@@ -181,163 +250,7 @@
 
 
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const videos = document.querySelectorAll('.video-animate');
-
-      // Alternate slide direction and disable right-click
-      videos.forEach((video, index) => {
-        video.classList.add(index % 2 === 0 ? 'slide-in-left' : 'slide-in-right');
-        video.addEventListener("contextmenu", e => e.preventDefault());
-      });
-
-      // Observer for animation on scroll
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.2
-      });
-
-      videos.forEach(video => observer.observe(video));
-    });
-
-    // Smooth scroll fallback for nav links
-    const links = document.querySelectorAll('nav a[href^="#"]');
-    links.forEach(link => {
-      link.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-  </script>
-
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    // Mobile menu toggle
-    const toggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
-
-    toggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-
-    // Smooth scroll
-    const links = document.querySelectorAll('nav a[href^="#"]');
-    links.forEach(link => {
-      link.addEventListener("click", function (e) {
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: "smooth" });
-
-          // Close menu on click (mobile)
-          navLinks.classList.remove("active");
-        }
-      });
-    });
-
-    // Disable right-click on videos
-    const videos = document.querySelectorAll("video");
-    videos.forEach((video, index) => {
-      video.classList.add(index % 2 === 0 ? "slide-in-left" : "slide-in-right");
-      video.addEventListener("contextmenu", e => e.preventDefault());
-    });
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-
-    videos.forEach(video => observer.observe(video));
-  });
-
-  const scrollBtn = document.getElementById("scrollTop");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollBtn.classList.add("show");
-  } else {
-    scrollBtn.classList.remove("show");
-  }
-});
-
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-const homeHeader = document.querySelector("header.home");
-
-const introObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    }
-  });
-}, {
-  threshold: 0.4
-});
-
-introObserver.observe(homeHeader);
-
-const contentBlocks = document.querySelectorAll(".section-content");
-
-const contentObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      contentObserver.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.3
-});
-
-contentBlocks.forEach(block => contentObserver.observe(block));
-
-const phrases = ["Video Editor.", "Creative Direction.", "Freelance Work.", "Cinematic Shorts.", "Vlogs & Montages."];
-const typedText = document.getElementById("typed-text");
-let currentPhrase = 0;
-let currentChar = 0;
-let isDeleting = false;
-
-function type() {
-  const current = phrases[currentPhrase];
-  typedText.textContent = current.substring(0, currentChar);
-
-  if (!isDeleting && currentChar < current.length) {
-    currentChar++;
-    setTimeout(type, 100);
-  } else if (isDeleting && currentChar > 0) {
-    currentChar--;
-    setTimeout(type, 50);
-  } else {
-    isDeleting = !isDeleting;
-    if (!isDeleting) {
-      currentPhrase = (currentPhrase + 1) % phrases.length;
-    }
-    setTimeout(type, 1000);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  if (typedText) type();
-});
-
-const contactCard = document.querySelector(".contact-card");
-observer.observe(contactCard);
-
-</script>
+  <script src="main.js"></script>
 
 </body>
 </html>
